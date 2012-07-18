@@ -1,0 +1,6 @@
+# src/Blogger/BlogBundle/Resources/config/config.yml
+parameters:
+    # Blogger contact email address
+    enrico_blog.emails.contact_email: provaprova704@gmail.com
+    enrico_blog.comments.latest_comment_limit: 10
+    enrico_blog.blog._limit: 15

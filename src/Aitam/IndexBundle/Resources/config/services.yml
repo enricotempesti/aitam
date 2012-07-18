@@ -1,0 +1,7 @@
+parameters:
+#    aitam_index.example.class: Aitam\IndexBundle\Example
+
+services:
+#    aitam_index.example:
+#        class: %aitam_index.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

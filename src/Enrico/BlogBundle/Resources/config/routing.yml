@@ -1,0 +1,54 @@
+# src/Enrico/BlogBundle/Resources/config/routing.yml
+EnricoBlogBundle_homepage:
+    pattern:  /
+    defaults: { _controller: EnricoBlogBundle:Page:index }
+    requirements:
+        _method:  GET
+        
+EnricoBlogBundle_about:
+    pattern:  /about
+    defaults: { _controller: EnricoBlogBundle:Page:about }
+    requirements:
+        _method:  GET
+        
+EnricoBlogBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: EnricoBlogBundle:Page:contact }
+    requirements:
+        _method:  GET|POST
+
+EnricoBlogBundle_blog_show:
+    pattern:  /{id}/{slug}
+    defaults: { _controller: EnricoBlogBundle:Blog:show }
+    requirements:
+        _method:  GET
+        id: \d+
+        
+EnricoBlogBundle_comment_create:
+    pattern:  /comment/{blog_id}
+    defaults: { _controller: EnricoBlogBundle:Comment:create }
+    requirements:
+        _method:  POST
+        blog_id: \d+
+        
+EnricoBlogBundle_nuovo_blog:
+    pattern:  /nuovo_blog
+    defaults: { _controller: EnricoBlogBundle:Page:nuovo_blog }
+    requirements:
+        _method:  GET
+
+login:
+    pattern:   /login
+    defaults:  { _controller: EnricoSecurityBundle:Security:login }
+login_check:
+    pattern:   /login_check
+    
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+        

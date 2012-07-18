@@ -1,0 +1,12 @@
+AitamIndexBundle:
+    resource: "@AitamIndexBundle/Resources/config/routing.yml"
+    prefix:   /
+BloggerBlogBundle_homepage:
+    pattern:  /
+    defaults: { _controller: AitamIndexBundle:Page:index }
+    requirements:
+        _method:  GET
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal
