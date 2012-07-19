@@ -23,20 +23,18 @@
     <div id="main_container">
     
         <div id="header">
-            <div id="logo"><a href="index.html">
-			<img src="{{ asset('bundles/AitamIndex/images/logo.JPG') }}" alt="Aitam" width="249" height="78" border="0" title="" /></a></div>
-            
-<a href="make-a-donation.html" class="make_donation"></a>
+            <div id="logo"><a href="index.php">
+			<img src="{{ asset('bundles/AitamIndex/images/logo.JPG') }}" alt="Aitam" width="165" height="55" border="0" title="" /></a></div>
             
         {% block navigation %}
 			<div id="menu">
                 <ul>                                                                                            
                     <li><a class="current" href="index.html" title="">Home</a></li>
                     <li><a href="about.html" title="">Statuto</a></li>
-                    <li><a href="#" title="">Projects</a></li>
+                    <li><a href="#" title="">Progetti</a></li>
                     <li><a href="#" title="">Cooperazione</a></li>
-                    <li><a href="#" title="">visti e permessi</a></li>
                     <li><a href="contact.html" title="">Contact</a></li>
+                    <li><a href="#" title="">Login</a></li>
                 </ul>
             </div>
         {% endblock %}   
@@ -102,14 +100,14 @@
         
         
          
-        <div class="home_section_left">
+        <div class="home_section_left1">
             <img src="{{ asset('bundles/AitamIndex/images/icon1.gif') }}" alt="" title="" class="home_section_icon" border="0">
                             
                 <h2 class="home_title">Cosa c'&egrave; di nuovo</h2>
                 <div class="home_subtitle">Consectetur adipisicing elit</div>
     
                 <div class="home_section_thumb">
-                <img src="images/home_section_thumb1.jpg" alt="" title="" border="0">
+                <img src="{{ asset('bundles/AitamIndex/images/home_section_thumb1.jpg') }}" alt="" title="" border="0">
                 </div>
                 <p><span>Lorem ipsum dolor sit ame</span><br>
                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
@@ -122,14 +120,14 @@
         </div>
         
         
-        <div class="home_section_left">
+        <div class="home_section_left2">
             <img src="{{ asset('bundles/AitamIndex/images/icon2.gif') }}" alt="" title="" class="home_section_icon" border="0">
                             
                 <h2 class="home_title">Da visitare</h2>
                 <div class="home_subtitle">Tempor incididunt ut labore</div>
     
                 <div class="home_section_thumb">
-                <img src="images/home_section_thumb2.jpg" alt="" title="" border="0">
+                <img src="{{ asset('bundles/AitamIndex/images/home_section_thumb2.jpg') }}" alt="" title="" border="0">
                 </div>
                 <p><span>Lorem ipsum dolor sit ame</span><br>
                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
@@ -141,22 +139,22 @@
         <div class="clear"></div>
         </div>
         
-        <div class="home_section_left">
+        <div class="home_section_left3">
             <img src="{{ asset('bundles/AitamIndex/images/icon3.gif') }}" alt="" title="" class="home_section_icon" border="0">
                             
-                <h2 class="home_title">Opportunit&agrave; investimenti</h2>
-                <div class="home_subtitle">Sed do eiusmod tempor</div>
+                <h2 class="home_title">Opportunit&agrave;</h2>
+                <div class="home_subtitle">Vista di manaus</div>
     
                 <div class="home_section_thumb">
-                <img src="images/home_section_thumb3.jpg" alt="" title="" border="0">
+                <img src="{{ asset('bundles/AitamIndex/images/home_section_thumb3.jpg') }}" alt="" title="" border="0">
                 </div>
-                <p><span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
+                <p><span>Prima opportunita di investimento</span><br>
+                Seconda opportunità di investimento 
                 <br> <br>
                 <span>Lorem ipsum dolor sit ame</span><br>
                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
                 </p>
-                <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
+                <a href="" class="more"><img src="{{ asset('bundles/AitamIndex/images/more.gif') }}" alt="" title="" border="0"></a>
         <div class="clear"></div>
         </div>
         

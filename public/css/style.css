@@ -37,7 +37,7 @@ margin:auto;
 height:90px;
 }
 #logo{
-padding:10px 0 0 20px;
+padding:10px 0 0 65px;
 float:left;
 }
 /*----------------------menu-------------------------*/
@@ -119,7 +119,23 @@ margin:auto;
 padding:20px 0 20px 0;
 background:url(images/center_bg_pages.gif) no-repeat center top;
 }
-.home_section_left{
+.home_section_left1{
+width:270px;
+height:auto;
+float:left;
+margin:0 14px 0 14px;
+padding:0 10px 20px 10px;
+background:url(images/home_block_bg.gif) no-repeat center bottom;
+}
+.home_section_left2{
+width:270px;
+height:auto;
+float:left;
+margin:0 14px 0 14px;
+padding:0 10px 20px 10px;
+background:url(images/home_block_bg.gif) no-repeat center bottom;
+}
+.home_section_left3{
 width:270px;
 height:auto;
 float:left;
