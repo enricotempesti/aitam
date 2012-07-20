@@ -1,0 +1,66 @@
+{% extends 'AitamIndexBundle::layout.html.twig' %}
+{% block title %}Contact{% endblock%}
+{% block body %}
+ <div class="center_content_pages">
+        
+              <div class="financial-application-form">
+             <h2>Contact Us</h2>
+             
+             <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+             </p>
+
+
+    <form action="{{ path('AitamIndexBundle_contact') }}" method="post" {{ form_enctype(form) }} class="form">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.name) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.web) }}
+        {{ form_row(form.subject) }}
+        {{ form_row(form.body) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" value="Submit" />
+    </form>
+    </div>
+    </div>
+
+            
+             <div class="testimonials">
+                    <h2>Stories and Testimonials </h2>
+                    <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    
+                    <div class="testbox">
+                    <h4>Stories:  </h4>
+                    <p>
+                    Sed do eiusmod tempor incididunt
+                    </p>
+                    </div>
+                    
+                    <div class="testbox">
+                    <h4>It eiusmod tempor incididunt</h4>
+                    <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    </div>             
+                    <div class="testbox">
+                    <h4>It consectetur adipisicing elit</h4>
+                    <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    </div>               
+                    
+             </div>
+        
+        
+        
+   
+        
+        <div class="clear"></div>
+        </div>
+ {% endblock %}

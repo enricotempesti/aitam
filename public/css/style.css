@@ -273,20 +273,21 @@ font-style:italic;
 
 
 /*-----------------------contact_form-------------------*/
-.form{
+.form-notice { text-align: center; padding: 10px; background: #DFF2BF; border: 1px solid; color: #4F8A10; margin-bottom: 10px; }
+form.form{
 width:500px;
 height:auto;
 float:left;
 padding:20px 10px 10px 20px;
 border:1px #fdeaeb solid;
 }
-.form_row{
+form.form_row{
 width:425px;
 float:left;
 clear:both;
 padding:7px 0 7px 0;
 }
-label{
+form.label{
 width:100px;
 float:left;
 padding:3px 15px 0 0;
@@ -294,7 +295,7 @@ color:#b52025;
 text-align:right;
 font-weight:bold;
 }
-input.main_input{
+form.input.main_input{
 background-color:#fdeaeb;
 border:1px #e2c7c8 solid;
 width:300px;
@@ -302,7 +303,7 @@ height:18px;
 padding:4px;
 float:left;
 }
-textarea.main_textarea{
+form.textarea.main_textarea{
 background-color:#fdeaeb;
 border:1px #e2c7c8 solid;
 width:300px;
@@ -310,7 +311,7 @@ height:120px;
 padding:4px;
 float:left;
 }
-input.submit{
+form.input.submit{
 background-color:#b52025;
 color:#FFFFFF;
 text-align:center;
