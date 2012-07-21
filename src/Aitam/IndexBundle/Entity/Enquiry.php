@@ -3,6 +3,13 @@
 
 namespace Aitam\IndexBundle\Entity;
 
+
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\MinLength;
+use Symfony\Component\Validator\Constraints\MaxLength;
+
 class Enquiry
 {
     protected $name;
@@ -15,14 +22,34 @@ class Enquiry
     
     protected $web;
     
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+    	$metadata->addPropertyConstraint('name', new NotBlank());
+    
+    	$metadata->addPropertyConstraint('email', new Email());
+    	$metadata->addPropertyConstraint('email', new Email(array(
+    			'message' => 'inserisci un email valido'
+    	)));
+    	
+    	$metadata->addPropertyConstraint('web', new NotBlank());
+    	$metadata->addPropertyConstraint('web', new MaxLength(30));
+    
+    	$metadata->addPropertyConstraint('subject', new NotBlank());
+    	$metadata->addPropertyConstraint('subject', new MaxLength(30));
+    
+    	$metadata->addPropertyConstraint('body', new MinLength(array('limit' => '50',
+    			'message' => 'messaggio troppo corto,deve superare i 50 caratteri'
+    	)));
+    }
+    
     public function getWeb()
     {
     	return $this->web;
     }
     
-    public function setWeb()
+    public function setWeb($web)
     {
-    	return $this->web;
+    	$this->web = $web;
     }
 
     public function getName()

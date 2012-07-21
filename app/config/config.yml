@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
     - { resource: @EnricoBlogBundle/Resources/config/config.yml }
+    - { resource: @AitamIndexBundle/Resources/config/config.yml }
 framework:
     #esi:             ~
     translator: ~

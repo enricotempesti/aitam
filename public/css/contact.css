@@ -1,0 +1,11 @@
+/*-----------------------contact_form-------------------*/
+.contact-notice { text-align: center; padding: 10px; background: #DFF2BF; border: 1px solid; color: #4F8A10; margin-bottom: 10px; }
+form.contact { font-size: 16px; }
+form.contact div { clear: left; margin-bottom: 10px; }
+form.contact label { float: left; margin-right: 10px; text-align: right; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+form.contact input[type="text"],
+form.contact input[type="email"]
+    { background-color:#fdeaeb; width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.contact textarea { background-color:#fdeaeb; width: 350px; height: 150px; line-height: 26px; font-size: 20px; }
+form.contact input[type="submit"] { margin-left: 110px; width: 358px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.contact ul li { color: #ff0000; margin-bottom: 5px; }

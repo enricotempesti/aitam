@@ -4,15 +4,23 @@
  <div class="center_content_pages">
         
               <div class="financial-application-form">
-             <h2>Contact Us</h2>
-             
+              {% if app.session.hasFlash('blogger-notice') %}
+                <div class="blogger-notice">
+                  {{ app.session.flash('blogger-notice') }}
+                </div>
+              {% endif %}
+             <h2>Spedisci un email</h2> 
              <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
+                Informazioni,consigli,suggerimenti,elogi critiche e quant'altro.
              </p>
+              {% if app.session.hasFlash('contact-notice') %}
+                  <div class="contact-notice">
+                      {{ app.session.flash('contact-notice') }} <h3>messaggio inviato con successo</h3>
+                  </div>
+              {% endif %}
+              </br>
 
-
-    <form action="{{ path('AitamIndexBundle_contact') }}" method="post" {{ form_enctype(form) }} class="form">
+    <form action="{{ path('AitamIndexBundle_contact') }}" method="post" {{ form_enctype(form) }} class="contact">
         {{ form_errors(form) }}
 
         {{ form_row(form.name) }}

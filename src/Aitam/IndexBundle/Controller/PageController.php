@@ -22,7 +22,16 @@ class PageController extends Controller
     if ($request->getMethod() == 'POST') {
         $form->bindRequest($request);
 
-        if ($form->isValid()) {
+            if ($form->isValid()) {
+
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Contatto da Aitam')
+            ->setFrom('form@Aitam.com')
+            ->setTo($this->container->getParameter('aitam_index.emails.contact_email'))
+            ->setBody($this->renderView('AitamIndexBundle:Page:contactEmail.txt.twig', array('enquiry' => $enquiry)));
+        $this->get('mailer')->send($message);
+
+        $this->get('session')->setFlash('contact-notice', 'La tua richiesta è stata spedita con successo!');
             // Perform some action, such as sending an email
 
             // Redirect - This is important to prevent users re-posting
