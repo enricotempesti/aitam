@@ -1,9 +1,17 @@
 AitamIndexBundle_homepage:
-    pattern:  /hello/{name}
+    pattern:  /index
     defaults: { _controller: AitamIndexBundle:Default:index }
+    requirements:
+        _method:  GET
 
 AitamIndexBundle_contact:
     pattern:  /contact
     defaults: { _controller: AitamIndexBundle:Page:contact }
     requirements:
         _method:  GET|POST
+        
+AitamIndexBundle_about:
+    pattern:  /about
+    defaults: { _controller: AitamIndexBundle:Page:about }
+    requirements:
+        _method:  GET        

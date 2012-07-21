@@ -182,7 +182,12 @@ width:660px;
 float:left;
 padding:0;
 }
-.left_block{
+.left_block1{
+width:295px;
+float:left;
+padding:20px 20px 10px 15px;
+}
+.left_block2{
 width:295px;
 float:left;
 padding:20px 20px 10px 15px;

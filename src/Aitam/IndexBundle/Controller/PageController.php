@@ -44,4 +44,9 @@ class PageController extends Controller
         'form' => $form->createView()
     ));
     }
+    
+    public function aboutAction()
+    {
+    	return $this->render('AitamIndexBundle:Page:about.html.twig');
+    }
 }

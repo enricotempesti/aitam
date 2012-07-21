@@ -23,16 +23,16 @@
     <div id="main_container">
     
         <div id="header">
-            <div id="logo"><a href="index.php">
+            <div id="logo"><a href="/aitam/public/app_dev.php">
 			<img src="{{ asset('bundles/AitamIndex/images/logo.JPG') }}" alt="Aitam" width="165" height="55" border="0" title="" /></a></div>
             
         {% block navigation %}
 			<div id="menu">
                 <ul>                                                                                            
                     <li><a class="current" href="index.html" title="">Home</a></li>
-                    <li><a href="about.html" title="">Statuto</a></li>
+                    <li><a href="#" title="">Statuto</a></li>
                     <li><a href="#" title="">Progetti</a></li>
-                    <li><a href="#" title="">Cooperazione</a></li>
+                    <li><a href="{{ path('AitamIndexBundle_about') }}">About</a></li>
                     <li><a href="{{ path('AitamIndexBundle_contact') }}">Contact</a></li>
                     <li><a href="#" title="">Login</a></li>
                 </ul>
