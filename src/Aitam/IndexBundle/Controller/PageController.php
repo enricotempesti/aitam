@@ -49,4 +49,14 @@ class PageController extends Controller
     {
     	return $this->render('AitamIndexBundle:Page:about.html.twig');
     }
+    
+    public function statutoAction()
+    {
+    	return $this->render('AitamIndexBundle:Page:statuto.html.twig');
+    }
+    
+    public function progettiAction()
+    {
+    	return $this->render('AitamIndexBundle:Page:progetti.html.twig');
+    }    
 }

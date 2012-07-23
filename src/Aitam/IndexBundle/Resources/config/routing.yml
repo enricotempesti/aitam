@@ -1,6 +1,6 @@
 AitamIndexBundle_homepage:
     pattern:  /index
-    defaults: { _controller: AitamIndexBundle:Default:index }
+    defaults: { _controller: AitamIndexBundle:Page:index }
     requirements:
         _method:  GET
 
@@ -14,4 +14,16 @@ AitamIndexBundle_about:
     pattern:  /about
     defaults: { _controller: AitamIndexBundle:Page:about }
     requirements:
-        _method:  GET        
+        _method:  GET 
+        
+AitamIndexBundle_statuto:
+    pattern:  /statuto
+    defaults: { _controller: AitamIndexBundle:Page:statuto }
+    requirements:
+        _method:  GET  
+        
+AitamIndexBundle_progetti:
+    pattern:  /progetti
+    defaults: { _controller: AitamIndexBundle:Page:progetti }
+    requirements:
+        _method:  GET               

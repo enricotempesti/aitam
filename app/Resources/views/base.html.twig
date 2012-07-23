@@ -29,9 +29,9 @@
         {% block navigation %}
 			<div id="menu">
                 <ul>                                                                                            
-                    <li><a class="current" href="index.html" title="">Home</a></li>
-                    <li><a href="#" title="">Statuto</a></li>
-                    <li><a href="#" title="">Progetti</a></li>
+                    <li><a href="{{ path('AitamIndexBundle_homepage') }}">Home</a></li>
+                    <li><a href="{{ path('AitamIndexBundle_statuto') }}">Statuto</a></li>
+                    <li><a href="{{ path('AitamIndexBundle_progetti') }}">Progetti</a></li>
                     <li><a href="{{ path('AitamIndexBundle_about') }}">About</a></li>
                     <li><a href="{{ path('AitamIndexBundle_contact') }}">Contact</a></li>
                     <li><a href="#" title="">Login</a></li>
