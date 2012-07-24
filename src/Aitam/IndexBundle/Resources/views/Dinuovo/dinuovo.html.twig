@@ -1,0 +1,62 @@
+{% extends 'AitamIndexBundle::layout.html.twig' %}
+{% block title %}{{ dinuovo.title }}{% endblock %}
+{% block body %}
+
+<div class="center_content_pages">
+        
+        
+        <div class="left_content">            
+                        	<h2>Cosa c'&egrave; di  nuovo</h2>
+        <div class="block_wide">
+     <article class="dinuovo">
+        <header>
+            <div class="date"><time datetime="{{ dinuovo.created|date('c') }}">{{ dinuovo.created|date('l, F j, Y') }}</time></div>
+            <h2>{{ dinuovo.title }}</h2>
+        </header>
+        <img src="{{ asset(['bundles/AitamIndex/images/', dinuovo.image]|join) }}" alt="{{ dinuovo.title }} image not found" class="large"/>
+        <div>
+            <p>{{ dinuovo.articolo }}</p>
+        </div>
+    </article>
+
+            
+            
+            </div>
+        
+        
+        </div>
+        
+        
+            <div class="right_block">
+            	<h2>Latest news</h2>
+                
+                <div class="home_news">
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit , consectetur adipisicing elit adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                </div>
+
+                
+                
+            </div>
+            
+            
+			<div class="wide_content">
+            	<h2>Terms &amp; Conditions</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>            
+            </div> 
+            
+   
+        
+        <div class="clear"></div>
+        </div>
+        {% endblock %}

@@ -26,4 +26,17 @@ AitamIndexBundle_progetti:
     pattern:  /progetti
     defaults: { _controller: AitamIndexBundle:Page:progetti }
     requirements:
-        _method:  GET               
+        _method:  GET 
+        
+AitamIndexBundle_dinuovo_show:
+    pattern:  /{id}
+    defaults: { _controller: AitamIndexBundle:Dinuovo:dinuovo }
+    requirements:
+        _method:  GET
+        id: \d+
+
+AitamIndexBundle_home_dinuovo:
+    pattern:  /home_dinuovo
+    defaults: { _controller: AitamIndexBundle:Dinuovo:home_dinuovo }
+    requirements:
+        _method:  GET              

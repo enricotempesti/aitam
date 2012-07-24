@@ -51,12 +51,11 @@
         	 target="_blank">by tempe projet</a></div>
         
         	<div class="footer_links">
-                <a class="current" href="index.html" title="">Home</a>
-                <a href="#" title="">About Company</a>
-                <a href="#" title="">Projects</a>
-                <a href="#" title="">Clients</a>
-                <a href="#" title="">Testimonials</a>
-                <a href="contact.html" title="">Contact</a>            
+                <a class="current"  href="{{ path('AitamIndexBundle_homepage') }}">Home</a>
+                <a href="{{ path('AitamIndexBundle_statuto') }}">Statuto</a>
+                <a href="{{ path('AitamIndexBundle_progetti') }}">Progetti</a>
+                <a href="{{ path('AitamIndexBundle_about') }}">About</a>
+                <a href="{{ path('AitamIndexBundle_contact') }}">Contact</a>            
             </div>
         </div>
 {% endblock %} 

@@ -1,0 +1,76 @@
+{% extends 'AitamIndexBundle::layout.html.twig' %}
+{#{% block title %}{{ dinuovo.title }}{% endblock %}#}
+{% block body %}
+
+<div class="center_content_pages">
+        
+        
+        <div class="left_content">            
+                        	<h2>Cosa c'&egrave; di  nuovo</h2>
+
+     <article class="block_wide">
+    {% for dinuovo in dinuovo %}
+        <article class="dinuovo">
+            <div class="date"><time datetime="{{ dinuovo.created|date('c') }}">{{ dinuovo.created|date('l, F j, Y') }}</time></div>
+            <header>
+                <h2><a href="{{ path('AitamIndexBundle_dinuovo_show', { 'id': dinuovo.id }) }}">{{ dinuovo.title }}</a></h2>
+            </header>
+
+            <img src="{{ asset(['bundles/AitamIndex/images/', dinuovo.image]|join) }}" />
+            <div class="snippet">
+                <p>{{ dinuovo.articolo(500) }}</p>
+                <p class="continue"><a href="{{ path('AitamIndexBundle_dinuovo_show', { 'id': dinuovo.id }) }}">Continua a leggere...</a></p>
+            </div>
+
+            <footer class="meta">
+                <p>Commenti: -</p>
+                <p>Scritto da <span class="highlight">{{dinuovo.author}}</span> il {{ dinuovo.created|date('h:iA') }}</p>
+                <p>Tags: <span class="highlight">{{ dinuovo.tags }}</span></p>
+            </footer>
+        </article>
+    {% else %}
+        <p>non ci sono nuove entrate</p>
+    {% endfor %}
+    </article>
+
+            
+            
+            </div>
+        
+        
+        </div>
+        
+        
+            <div class="right_block">
+            	<h2>Latest news</h2>
+                
+                <div class="home_news">
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit , consectetur adipisicing elit adipisicing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                </div>
+
+                
+                
+            </div>
+            
+            
+			<div class="wide_content">
+            	<h2>Terms &amp; Conditions</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>            
+            </div> 
+            
+   
+        
+        <div class="clear"></div>
+        </div>
+        {% endblock %}
