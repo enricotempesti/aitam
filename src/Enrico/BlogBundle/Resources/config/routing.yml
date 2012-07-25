@@ -1,4 +1,3 @@
-# src/Enrico/BlogBundle/Resources/config/routing.yml
 EnricoBlogBundle_homepage:
     pattern:  /
     defaults: { _controller: EnricoBlogBundle:Page:index }

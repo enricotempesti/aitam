@@ -1,5 +1,5 @@
-{% extends 'AitamIndexBundle::layout.html.twig' %}
-{#{% block title %}{{ dinuovo.title }}{% endblock %}#}
+{% extends 'EnricoBlogBundle::layout.html.twig' %}
+{% block title %}Di nuovo{% endblock %}
 {% block body %}
 
 <div class="center_content_pages">
@@ -18,7 +18,7 @@
 
             <img src="{{ asset(['bundles/AitamIndex/images/', dinuovo.image]|join) }}" />
             <div class="snippet">
-                <p>{{ dinuovo.articolo(500) }}</p>
+                <p>{{ dinuovo.articolo(250) }}</p>
                 <p class="continue"><a href="{{ path('AitamIndexBundle_dinuovo_show', { 'id': dinuovo.id }) }}">Continua a leggere...</a></p>
             </div>
 
@@ -73,4 +73,4 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         
         <div class="clear"></div>
         </div>
-        {% endblock %}
+{% endblock %}

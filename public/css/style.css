@@ -174,7 +174,7 @@ float:right;
 /*------------------------------------------dinuovo.css----------------------------*/
 .date { margin-bottom: 20px; border-bottom: 1px solid #ccc; font-size: 14px; color: #666; line-height: 30px }
 .dinuovo { margin-bottom: 20px; }
-.dinuovo img { width: 190px; float: left; padding: 5px; border: 1px solid #ccc; margin: 0 10px 10px 0; }
+.dinuovo img { width: 120px; float: left; padding: 5px; border: 1px solid #ccc; margin: 0 10px 10px 0; }
 .dinuovo .meta { clear: left; margin-bottom: 20px; }
 .dinuovo .snippet p.continue { margin-bottom: 0; text-align: right; }
 .dinuovo .meta { font-style: italic; font-size: 12px; color: #666; }
@@ -223,7 +223,7 @@ padding-top:10px;
 border-top:1px #ededed solid;
 }
 .wide_content{
-width:930px;
+width:850px;
 clear:both;
 padding:10px 15px 0 15px;
 }
