@@ -4,9 +4,10 @@
 namespace Aitam\IndexBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Aitam\IndexBundle\Repository\DinuovoRepository")
  * @ORM\Table(name="dinuovo")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -44,7 +45,10 @@ class Dinuovo
      */
     protected $tags;
 
-    protected $comments;
+    /**
+     * @ORM\OneToMany(targetEntity="Commenti", mappedBy="dinuovo")
+     */
+    protected $commenti;
 
     /**
      * @ORM\Column(type="datetime")
@@ -211,8 +215,10 @@ class Dinuovo
     
     public function __construct()
     {
-    	$this->setCreated(new \DateTime());
-    	$this->setUpdated(new \DateTime());
+        $this->comments = new ArrayCollection();
+
+        $this->setCreated(new \DateTime());
+        $this->setUpdated(new \DateTime());
     }
     
     /**
@@ -221,5 +227,35 @@ class Dinuovo
     public function setUpdatedValue()
     {
     	$this->setUpdated(new \DateTime());
+    }
+
+    /**
+     * Add commenti
+     *
+     * @param Aitam\IndexBundle\Entity\Commenti $commenti
+     */
+    public function addComment(\Aitam\IndexBundle\Entity\Commenti $commenti)
+    {
+        $this->commenti[] = $commenti;
+    }
+
+    /**
+     * Get comments
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommenti()
+    {
+        return $this->commenti;
+    }
+
+    /**
+     * Add commenti
+     *
+     * @param Aitam\IndexBundle\Entity\Commenti $commenti
+     */
+    public function addCommenti(\Aitam\IndexBundle\Entity\Commenti $commenti)
+    {
+        $this->commenti[] = $commenti;
     }
 }

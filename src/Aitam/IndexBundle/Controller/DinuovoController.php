@@ -16,14 +16,18 @@ class DinuovoController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $dinuovo = $em->getRepository('AitamIndexBundle:dinuovo')->find($id);
+        $dinuovo = $em->getRepository('AitamIndexBundle:Dinuovo')->find($id);
 
-        if (!$dinuovo) {
-            throw $this->createNotFoundException('Unable to find Dinuovo post.');
+      if (!$dinuovo) {
+        throw $this->createNotFoundException('Unable to find Blog post.');
         }
+
+         $commenti = $em->getRepository('AitamIndexBundle:Commenti')
+                   ->getCommentiForarticolo($dinuovo->getId());
 
         return $this->render('AitamIndexBundle:Dinuovo:dinuovo.html.twig', array(
             'dinuovo' => $dinuovo,
+            'commenti'  => $commenti
         ));
     }
     
@@ -32,15 +36,12 @@ class DinuovoController extends Controller
     	$em = $this->getDoctrine()
     	->getEntityManager();
     
-    	$dinuovo = $em->createQueryBuilder()
-    	->select('b')
-    	->from('AitamIndexBundle:dinuovo',  'b')
-    	->addOrderBy('b.created', 'DESC')
-    	->getQuery()
-    	->getResult();
+    	$dinuovo = $em->getRepository('AitamIndexBundle:Dinuovo')
+    	->getLatestDinuovo();
     
     	return $this->render('AitamIndexBundle:Dinuovo:home_dinuovo.html.twig', array(
     			'dinuovo' => $dinuovo
     	));
     }
+    
 }
