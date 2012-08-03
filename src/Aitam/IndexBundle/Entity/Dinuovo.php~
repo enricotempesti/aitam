@@ -41,9 +41,9 @@ class Dinuovo
     protected $image;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string")
      */
-    protected $tags;
+    protected $slug;
 
     /**
      * @ORM\OneToMany(targetEntity="Commenti", mappedBy="articolo")

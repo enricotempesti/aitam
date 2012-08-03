@@ -29,7 +29,7 @@ AitamIndexBundle_progetti:
         _method:  GET 
         
 AitamIndexBundle_dinuovo_show:
-    pattern:  /{id}
+    pattern:  /{id}/{slug}
     defaults: { _controller: AitamIndexBundle:Dinuovo:dinuovo }
     requirements:
         _method:  GET

@@ -6,3 +6,4 @@
 .sidebar .small { font-size: 12px; }
 .sidebar .comment p { margin-bottom: 5px; }
 .sidebar .comment { margin-bottom: 10px; padding-bottom: 10px; }
+.sidebar a {border-radius:5px; background: #F9F8C8;color: #B52025; font-size: 12px; text-decoration:none} 

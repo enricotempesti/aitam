@@ -12,7 +12,7 @@ class DinuovoController extends Controller
     /**
      * Show a dinuovo entry
      */
-    public function DinuovoAction($id)
+    public function DinuovoAction($id,$slug)
     {
         $em = $this->getDoctrine()->getEntityManager();
 

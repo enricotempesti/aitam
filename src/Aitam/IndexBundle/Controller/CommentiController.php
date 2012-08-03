@@ -42,7 +42,8 @@ class CommentiController extends Controller
             $em->flush();
 
             return $this->redirect($this->generateUrl('AitamIndexBundle_dinuovo_show', array(
-                'id' => $commenti->getarticolo()->getId())) .
+                'id' => $commenti->getarticolo()->getId(),
+                'slug'  => $commenti->getArticolo()->getSlug())) .
                 '#commenti-' . $commenti->getId()
             );
 

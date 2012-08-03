@@ -6,10 +6,10 @@
         <article class="comment">
             <header>
                 <p class="small"><span class="highlight">{{ commenti.utente }}</span> commentato su </br>
-                    <a href="{{ path('AitamIndexBundle_dinuovo_show', { 'id': commenti.articolo.id }) }}#comment-{{ commenti.id }}">
+                    <a href="{{ path('AitamIndexBundle_dinuovo_show', { 'id': commenti.articolo.id,'slug': commenti.articolo.slug  }) }}-{{ commenti.id }}">
                         {{ commenti.articolo.title }}
-                    </a>
-                    [<em><time datetime="{{ commenti.created|date('c') }}">{{ commenti.created|date('Y-m-d h:iA') }}</time></em>]
+                    </a></br>
+                      <em><time datetime="{{ commenti.created|date('c') }}">{{ commenti.created|created_ago }}</time></em>
                 </p>
             </header>
             <p>{{ commenti.commenti }}</p>
