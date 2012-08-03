@@ -1,0 +1,8 @@
+.sidebar .section { margin-bottom: 20px; }
+.sidebar h3 { line-height: 1.2em; font-size: 20px; margin-bottom: 10px; font-weight: normal; border-radius:8px; background: #eee; padding: 5px;  }
+.sidebar p { line-height: 1.5em; margin-bottom: 20px; }
+.sidebar ul { list-style: none }
+.sidebar ul li { line-height: 1.5em }
+.sidebar .small { font-size: 12px; }
+.sidebar .comment p { margin-bottom: 5px; }
+.sidebar .comment { margin-bottom: 10px; padding-bottom: 10px; }

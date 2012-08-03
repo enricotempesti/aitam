@@ -46,7 +46,7 @@ class Dinuovo
     protected $tags;
 
     /**
-     * @ORM\OneToMany(targetEntity="Commenti", mappedBy="dinuovo")
+     * @ORM\OneToMany(targetEntity="Commenti", mappedBy="articolo")
      */
     protected $commenti;
 
@@ -257,5 +257,10 @@ class Dinuovo
     public function addCommenti(\Aitam\IndexBundle\Entity\Commenti $commenti)
     {
         $this->commenti[] = $commenti;
+    }
+    
+    public function __toString()
+    {
+    	return $this->getTitle();
     }
 }

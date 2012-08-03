@@ -1,4 +1,4 @@
-{% extends 'EnricoBlogBundle::layout.html.twig' %}
+{% extends 'AitamIndexBundle::layout.html.twig' %}
 {% block title %}Di nuovo{% endblock %}
 {% block body %}
 
@@ -23,39 +23,21 @@
             </div>
 
             <footer class="meta">
-                <p>Commenti: -</p>
-                <p>Scritto da <span class="highlight">{{dinuovo.author}}</span> il {{ dinuovo.created|date('h:iA') }}</p>
-                <p>Tags: <span class="highlight">{{ dinuovo.tags }}</span></p>
+    <p>Commenti: <a href="{{ path('AitamIndexBundle_dinuovo_show', { 'id': dinuovo.id }) }}#comments">{{ dinuovo.commenti|length }}</a></p>
+    <p>Scritto da <span class="highlight">{{ dinuovo.author }}</span> il {{ dinuovo.created|date('h:iA') }}</p>
+    <p>Tags: <span class="highlight">{{ dinuovo.tags }}</span></p>
             </footer>
         </article>
     {% else %}
         <p>non ci sono nuove entrate</p>
     {% endfor %}
     </article>
-
-            
-            
             </div>
-        
-        
         </div>
-        
-        
             <div class="right_block">
-            	<h2>Latest news</h2>
-                
-                <div class="home_news">
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit</a>
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit , consectetur adipisicing elit adipisicing elit</a>
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                </div>
-
-                
-                
+               {% block sidebar %}
+                   {{ parent() }}
+               {% endblock %}    
             </div>
             
             

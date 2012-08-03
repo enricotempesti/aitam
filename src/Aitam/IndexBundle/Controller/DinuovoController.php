@@ -25,7 +25,7 @@ class DinuovoController extends Controller
          $commenti = $em->getRepository('AitamIndexBundle:Commenti')
                    ->getCommentiForarticolo($dinuovo->getId());
 
-        return $this->render('AitamIndexBundle:Dinuovo:dinuovo.html.twig', array(
+        return $this->render('AitamIndexBundle:Dinuovo:dinuovo_show.html.twig', array(
             'dinuovo' => $dinuovo,
             'commenti'  => $commenti
         ));

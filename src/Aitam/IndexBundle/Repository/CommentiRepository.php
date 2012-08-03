@@ -28,4 +28,17 @@ class CommentiRepository extends EntityRepository
 		->getResult();
 	}
 	
+	public function getLatestCommenti($limit = 15)
+	{
+		$qb = $this->createQueryBuilder('c')
+		->select('c')
+		->addOrderBy('c.id', 'DESC');
+	
+		if (false === is_null($limit))
+			$qb->setMaxResults($limit);
+	
+		return $qb->getQuery()
+		->getResult();
+	}
+	
 }

@@ -2,11 +2,10 @@
 {% block title %}{{ dinuovo.title }}{% endblock %}
 {% block body %}
 
+<a href="{{ path('AitamIndexBundle_home_dinuovo') }}"><h2>Cosa c'&egrave; di  nuovo</h2></a>
 <div class="center_content_pages">
         
-        
-        <div class="left_content">            
-                        	<h2>Cosa c'&egrave; di  nuovo</h2>
+   <div class="left_content">
         <div class="block_wide">
      <article class="dinuovo">
         <header>
@@ -23,27 +22,17 @@
         <section class="previous-comments">
             <h3>Commenti</h3>
             {% include 'AitamIndexBundle:Commenti:commenti.html.twig' with { 'commenti': commenti } %}
+                    <h3>Aggiungi un commento</h3>
+            {% render 'AitamIndexBundle:Commenti:new' with { 'dinuovo_id' : dinuovo.id } %}
         </section>
     </section>
-            
-            
             </div>
-        
-        
         </div>
-        
-        
             <div class="right_block">
-            	<h2>Latest news</h2>
-                
-             {% block sidebar %}
-             {% endblock %}
-
-                
-                
+               {% block sidebar %}
+                   {{ parent() }}
+               {% endblock %}     
             </div>
-            
-            
 			<div class="wide_content">
             	<h2>Terms  Conditions</h2>
 <p>

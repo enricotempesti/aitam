@@ -1,0 +1,6 @@
+<form action="{{ path('AitamIndexBundle_comment_create', { 'dinuovo_id' : commenti.articolo.id } ) }}" method="post" {{ form_enctype(form) }} class="contact_c">
+    {{ form_widget(form) }}
+    <p>
+        <input type="submit" value="Invia">
+    </p>
+</form>

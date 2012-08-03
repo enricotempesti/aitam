@@ -58,5 +58,21 @@ class PageController extends Controller
     public function progettiAction()
     {
     	return $this->render('AitamIndexBundle:Page:progetti.html.twig');
-    }    
+    } 
+
+    public function sidebarAction()
+    {
+    	    $em = $this->getDoctrine()
+               ->getEntityManager();
+    
+    	$commentLimit   = $this->container
+    	->getParameter('aitam_dinuovo.commenti.latest_comment_limit');
+    	$latestCommenti = $em->getRepository('AitamIndexBundle:Commenti')
+    	->getLatestCommenti($commentLimit);
+    
+    	return $this->render('AitamIndexBundle:Page:sidebar.html.twig', array(
+    			'latestCommenti'    => $latestCommenti,
+    	));
+    }
+    
 }

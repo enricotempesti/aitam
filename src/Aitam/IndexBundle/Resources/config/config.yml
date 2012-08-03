@@ -1,3 +1,4 @@
 parameters:
     # Blogger contact email address
     aitam_index.emails.contact_email: entemp@tin.it
+    aitam_dinuovo.commenti.latest_comment_limit: 15

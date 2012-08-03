@@ -100,7 +100,7 @@ class Commenti
      *
      * @param text $commenti
      */
-    public function setCommenti($comment)
+    public function setCommenti($commenti)
     {
         $this->commenti = $commenti;
     }

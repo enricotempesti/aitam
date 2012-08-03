@@ -1,0 +1,8 @@
+{% extends 'AitamIndexBundle::layout.html.twig' %}
+
+{% block title %}Scrivi un commento{% endblock%}
+
+{% block body %}
+    <h1>Scrivi un commento per questo articolo "{{ commenti.articolo.title }}"</h1>
+    {% include 'AitamIndexBundle:Commenti:form.html.twig' with { 'form': form } %}
+{% endblock %}

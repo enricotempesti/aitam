@@ -15,9 +15,10 @@ class DinuovoRepository extends EntityRepository
 	
 	public function getLatestDinuovo($limit = null)
 	{
-		$qb = $this->createQueryBuilder('b')
-		->select('b')
-		->addOrderBy('b.created', 'DESC');
+		$qb = $this->createQueryBuilder('d')
+		->select('d')
+		->leftJoin('d.commenti', 'c')
+		->addOrderBy('d.created', 'DESC');
 	
 		if (false === is_null($limit))
 			$qb->setMaxResults($limit);

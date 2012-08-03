@@ -39,4 +39,11 @@ AitamIndexBundle_home_dinuovo:
     pattern:  /home_dinuovo
     defaults: { _controller: AitamIndexBundle:Dinuovo:home_dinuovo }
     requirements:
-        _method:  GET              
+        _method:  GET 
+        
+AitamIndexBundle_comment_create:
+    pattern:  /commenti/{dinuovo_id}
+    defaults: { _controller: AitamIndexBundle:Commenti:create }
+    requirements:
+        _method:  POST
+        blog_id: \d+             

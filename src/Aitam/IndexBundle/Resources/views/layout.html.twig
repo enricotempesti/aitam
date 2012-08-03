@@ -1,11 +1,11 @@
-{# Src / Blogger / BlogBundle / Resources / views / layout.html.twig #}
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
     {{ parent() }}
     <link href="{{ asset('css/contact.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('css/sidebar.css') }}" type="text/css" rel="stylesheet" />
 {% endblock %}
 
 {% block sidebar %}
-    Sidebar content
+    {% render "AitamIndexBundle:Page:sidebar" %}
 {% endblock %}
