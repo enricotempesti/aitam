@@ -11,7 +11,7 @@
      <article class="block_wide">
     {% for dinuovo in dinuovo %}
         <article class="dinuovo">
-            <div class="date"><time datetime="{{ dinuovo.created|date('c') }}">{{ dinuovo.created|date('l, F j, Y') }}</time></div>
+            <div class="date"><time datetime="{{ dinuovo.created|date('c') }}">{{ dinuovo.created|localizeddate() }}</time></div>
             <header>
                 <h2><a href="{{ path('AitamIndexBundle_dinuovo_show', { 'id': dinuovo.id,'slug': dinuovo.slug }) }}">{{ dinuovo.title }}</a></h2>
             </header>

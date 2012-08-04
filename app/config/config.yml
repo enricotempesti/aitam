@@ -1,7 +1,6 @@
 imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
-    - { resource: @EnricoBlogBundle/Resources/config/config.yml }
     - { resource: @AitamIndexBundle/Resources/config/config.yml }
 framework:
     #esi:             ~
@@ -85,21 +84,21 @@ services:
         tags:
             - { name: twig.extension }
 
-    enrico.blog.admin.blog:
-      class: Enrico\BlogBundle\Admin\BlogAdmin
+    aitam.index.admin.dinuovo:
+      class: Aitam\IndexBundle\Admin\DinuovoAdmin
       tags:
-        - { name: sonata.admin, manager_type: orm, group: enrico_blog, label: blog }
-      arguments: [null, Enrico\BlogBundle\Entity\Blog, EnricoBlogBundle:BlogAdmin]
+        - { name: sonata.admin, manager_type: orm, group: aitam_index, label: dinuovo }
+      arguments: [null, Aitam\IndexBundle\Entity\Dinuovo, AitamIndexBundle:DinuovoAdmin]
       calls:
           - [ setLabelTranslatorStrategy, [ @sonata.admin.label.strategy.underscore ] ] 
       
-    enrico.blog.admin.comment:
-      class: Enrico\BlogBundle\Admin\CommentAdmin
+    aitam.index.admin.commenti:
+      class: Aitam\IndexBundle\Admin\CommentiAdmin
       tags:
-        - { name: sonata.admin, manager_type: orm, group: enrico_blog, label: comment }
-      arguments: [null, Enrico\BlogBundle\Entity\Comment, EnricoBlogBundle:CommentAdmin]
+        - { name: sonata.admin, manager_type: orm, group: aitam_index, label: commenti }
+      arguments: [null, Aitam\IndexBundle\Entity\Commenti, AitamIndexBundle:CommentiAdmin]
       
 simple_things_entity_audit:
     audited_entities:
-        - Enrico/BlogBundle\Entity\Blog
-        - Enrico/BlogBundle\Entity\Comment
+        - Aitam/IndexBundle\Entity\Dinuovo
+        - Aitam/IndexBundle\Entity\Commenti

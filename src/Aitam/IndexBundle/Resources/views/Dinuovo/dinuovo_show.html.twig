@@ -9,7 +9,7 @@
         <div class="block_wide">
      <article class="dinuovo">
         <header>
-            <div class="date"><time datetime="{{ dinuovo.created|date('c') }}">{{ dinuovo.created|date('l, F j, Y') }}</time></div>
+            <div class="date"><time datetime="{{ dinuovo.created|date('c') }}">{{ dinuovo.created|localizeddate() }}</time></div>
             <h2>{{ dinuovo.title }}</h2>
         </header>
         <img src="{{ asset(['bundles/AitamIndex/images/', dinuovo.image]|join) }}" alt="{{ dinuovo.title }} image not found" class="large"/>
