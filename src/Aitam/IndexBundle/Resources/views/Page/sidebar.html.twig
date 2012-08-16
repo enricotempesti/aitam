@@ -12,7 +12,7 @@
                       <em><time datetime="{{ commenti.created|date('c') }}">{{ commenti.created|created_ago }}</time></em>
                 </p>
             </header>
-            <p>{{ commenti.commenti }}</p>
+            <p>{{ commenti.commenti(100) }}</p>
             </p>
         </article>
     {% else %}

@@ -110,8 +110,11 @@ class Commenti
      *
      * @return text 
      */
-    public function getCommenti()
+    public function getCommenti($length = null)
     {
+    	if (false === is_null($length) && $length > 0)
+    		return substr($this->commenti, 0, $length);
+    	else
         return $this->commenti;
     }
 

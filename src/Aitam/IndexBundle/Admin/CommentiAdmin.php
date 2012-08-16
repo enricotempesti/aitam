@@ -22,10 +22,7 @@ class CommentiAdmin extends Admin
             $formMapper->add('articolo', 'sonata_type_model', array(), array('edit' => 'list'));
         }
 
-        $formMapper
-            ->add('utente')
-            ->add('commenti')
-        ;
+
     }
 
     /**

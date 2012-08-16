@@ -2,7 +2,7 @@
 {% for commenti in commenti %}
     <article class="comment {{ cycle(['odd', 'even'], loop.index0) }}" id="commenti-{{ commenti.id }}">
         <header>
-            <p><span class="highlight">{{ commenti.utente }}</span> commentato <time datetime="{{ commenti.created|date('c') }}">{{ commenti.created|date('l, F j, Y') }}</time></p>
+            <p><span class="highlight">{{ commenti.utente }}</span> commentato <time datetime="{{ commenti.created|date('c') }}">{{ commenti.created|localizeddate() }}</time></p>
         </header>
         </br>
         <p>{{ commenti.commenti }}</p>
