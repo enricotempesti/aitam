@@ -10,7 +10,16 @@ class PageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('AitamIndexBundle:Page:index.html.twig');
+    		$em = $this->getDoctrine()
+    		->getEntityManager();
+    	
+    		$dinuovo = $em->getRepository('AitamIndexBundle:Dinuovo')
+    		->getBlogDinuovo($limit = 3);
+    	
+    		return $this->render('AitamIndexBundle:Page:index.html.twig', array(
+    				'dinuovo' => $dinuovo
+    		));
+    	   
     }
     
     public function contactAction()

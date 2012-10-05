@@ -13,7 +13,7 @@ form.contact_c { font-size: 16px; }
 form.contact_c div { clear: left; margin-bottom: 10px; }
 form.contact_c label { float: left;  text-align: right; width: 10px; font-weight: bold; vertical-align: top; padding-top: 10px; }
 form.contact_c input[type="text"],
-form.contact input[type="email"]
+form.contact input[type="user"]
     {  width: 620px; line-height: 26px; font-size: 20px; min-height: 26px; }
 form.contact_c textarea {  width: 620px; height: 150px; line-height: 26px; font-size: 20px; }
 form.contact_c input[type="submit"] {  width: 628px; line-height: 26px; font-size: 20px; min-height: 26px; }

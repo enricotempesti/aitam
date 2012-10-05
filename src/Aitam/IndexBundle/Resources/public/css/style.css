@@ -181,6 +181,7 @@ float:right;
 .dinuovo .meta { font-style: italic; font-size: 12px; color: #666; }
 .dinuovo .meta p { margin-bottom: 5px; line-height: 1.2em; }
 .dinuovo img.large { width: 600px; min-height: 165px; }
+.dinuovo img.small { width: 60px; min-height: 35px; }
 .comments { clear: both; }
 .comments .odd { border-radius:8px ; background: #F4F2F2; }
 .comments .even{ border-radius:8px ; background: #F9F8C8; }

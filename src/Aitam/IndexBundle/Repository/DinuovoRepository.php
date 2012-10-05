@@ -26,5 +26,19 @@ class DinuovoRepository extends EntityRepository
 		return $qb->getQuery()
 		->getResult();
 	}
+	
+	public function getBlogDinuovo($limit = null)
+	{
+		$qb = $this->createQueryBuilder('d')
+		->select('d')
+		->leftJoin('d.commenti', 'c')
+		->addOrderBy('d.created', 'DESC');
+	
+		if (false === is_null($limit))
+			$qb->setMaxResults($limit);
+	
+		return $qb->getQuery()
+		->getResult();
+	}
 		
 }

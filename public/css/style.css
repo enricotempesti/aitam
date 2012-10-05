@@ -117,7 +117,7 @@ width:960px;
 clear:both;
 margin:auto;
 padding:20px 0 20px 0;
-background:url(images/center_bg_pages.gif) no-repeat center top;
+
 }
 .home_section_left1{
 width:270px;
@@ -125,7 +125,7 @@ height:auto;
 float:left;
 margin:0 14px 0 14px;
 padding:0 10px 20px 10px;
-background:url(images/home_block_bg.gif) no-repeat center bottom;
+
 }
 .home_section_left2{
 width:270px;
@@ -133,7 +133,7 @@ height:auto;
 float:left;
 margin:0 14px 0 14px;
 padding:0 10px 20px 10px;
-background:url(images/home_block_bg.gif) no-repeat center bottom;
+
 }
 .home_section_left3{
 width:270px;
@@ -141,7 +141,7 @@ height:auto;
 float:left;
 margin:0 14px 0 14px;
 padding:0 10px 20px 10px;
-background:url(images/home_block_bg.gif) no-repeat center bottom;
+
 }
 .home_section_left p{
 clear:both;
@@ -173,7 +173,7 @@ float:right;
 }
 /*------------------------------------------dinuovo.css----------------------------*/
 .highlight { font-size: 14px;color: #B52025; }
-.date { margin-bottom: 20px; border-bottom: 1px solid #ccc; font-size: 14px; color: #666; line-height: 30px }
+.date { clear: left;margin-bottom: 20px; border-bottom: 1px solid #ccc; font-size: 14px; color: #666; line-height: 30px }
 .dinuovo { margin-bottom: 20px; }
 .dinuovo img { width: 120px; float: left; padding: 5px; border: 1px solid #ccc; margin: 0 10px 10px 0; }
 .dinuovo .meta { clear: left; margin-bottom: 20px; }
@@ -181,6 +181,7 @@ float:right;
 .dinuovo .meta { font-style: italic; font-size: 12px; color: #666; }
 .dinuovo .meta p { margin-bottom: 5px; line-height: 1.2em; }
 .dinuovo img.large { width: 600px; min-height: 165px; }
+.dinuovo img.small { width: 60px; min-height: 35px; }
 .comments { clear: both; }
 .comments .odd { border-radius:8px ; background: #F4F2F2; }
 .comments .even{ border-radius:8px ; background: #F9F8C8; }
@@ -254,9 +255,7 @@ float:left;
 background:url(images/arrow.gif) no-repeat left top;
 background-position: 0px 13px;
 }
-.home_news a:hover{
-text-decoration:underline;
-}
+
 input.newsletter_input{
 background-color:#fdeaeb;
 border:1px #e2c7c8 solid;
